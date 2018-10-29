@@ -1,10 +1,10 @@
 ﻿using System.Collections.Generic;
 using noughtsandcrosses.api.Dtos;
+using noughtsandcrosses.api.Logic.Dtos;
 using noughtsandcrosses.api.Logic.Interfaces;
 using noughtsandcrosses.api.Repositories.Interfaces;
-using noughtsandcrosses.api.src.Dtos;
 
-namespace noughtsandcrosses.api.src.Logic
+namespace noughtsandcrosses.api.Logic
 {
     public class GameLogic : IGameLogic
     {
@@ -23,7 +23,7 @@ namespace noughtsandcrosses.api.src.Logic
 
         public GameDto CreateGame(GameDto gameDto)
         {
-            var game = _gameRepository.CreateGame(Mapper.MapGameDtoToGame(gameDto));
+            var game = _gameRepository.AddGame(Mapper.MapGameDtoToGame(gameDto));
             return Mapper.MapGameToGameDto(game);
         }
 

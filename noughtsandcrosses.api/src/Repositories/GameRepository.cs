@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
-using noughtsandcrosses.api.Models;
 using noughtsandcrosses.api.Repositories.Interfaces;
+using noughtsandcrosses.api.Repositories.Models;
 
 namespace noughtsandcrosses.api.Repositories
 {
@@ -14,11 +14,12 @@ namespace noughtsandcrosses.api.Repositories
             _dataContext = dataContext;
         }
 
-        public Game CreateGame(Game game)
+        public Game AddGame(Game game)
         {
-            var newGame = _dataContext.Games.Add(game);
+            var newGame = new Game { IsGameOver = game.IsGameOver, IsGameWon = game.IsGameWon };
+            _dataContext.Games.Add(game);
             _dataContext.SaveChanges();
-            return game;
+            return newGame;
         }
 
         public bool UpdateGame(Game game)

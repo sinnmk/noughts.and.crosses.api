@@ -1,6 +1,7 @@
-﻿using noughtsandcrosses.Server.Repositories.Models;
+﻿using noughtsandcrosses.api.Repositories.Models;
+using noughtsandcrosses.Server.Modules;
 
-namespace noughtsandcrosses.Server.Modules
+namespace noughtsandcrosses.api.Logic
 {
     public class SignUpLogic: ISignUpLogic
     {

@@ -1,12 +1,19 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace noughtsandcrosses.api.Models
+namespace noughtsandcrosses.api.Repositories.Models
 {
     public class Player
     {
-        [Required]
+        public Player()
+        {
+
+        }
+        
+        [Key]
         public int PlayerId { get; set; }
+        [Required]
         public string PlayerName { get; set; }
+        [Required]
         public int PlayerLevel { get; set; }
     }
 }

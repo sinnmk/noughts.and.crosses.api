@@ -1,12 +1,19 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace noughtsandcrosses.api.Models
+namespace noughtsandcrosses.api.Repositories.Models
 {
     public class Game
     {
-        [Required]
+        public Game()
+        {
+
+        }
+
+        [Key]
         public int GameId { get; set; }
+        [Required]
         public bool IsGameOver { get; set; }
+        [Required]
         public bool IsGameWon { get; set; }
     }
 }

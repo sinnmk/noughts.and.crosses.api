@@ -1,7 +1,8 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
-using noughtsandcrosses.api.Models;
 using noughtsandcrosses.api.Repositories.Interfaces;
+using noughtsandcrosses.api.Repositories.Models;
 
 namespace noughtsandcrosses.api.Repositories
 {
@@ -14,11 +15,12 @@ namespace noughtsandcrosses.api.Repositories
             _dataContext = dataContext;
         }
 
-        public Board CreateBoard(Board board)
+        public Board AddBoard(Board board)
         {
-            var newBoard = _dataContext.Boards.Add(board);
+            var newBoard = new Board { BoardDimension = 3, IsTerminal = board.IsTerminal};
+            _dataContext.Boards.Add(newBoard);
             _dataContext.SaveChanges();
-            return new Board();
+            return newBoard;
         }
 
         public List<Board> GetBoards()
@@ -30,11 +32,15 @@ namespace noughtsandcrosses.api.Repositories
         public bool UpdateBoard(Board board)
         {
             var existingBoard = _dataContext.Boards.FirstOrDefault(x => x.BoardId == board.BoardId);
-            if (existingBoard != null)
+            if (existingBoard == null)
             {
-                existingBoard.IsTerminal = existingBoard.IsTerminal;
+                throw new Exception("Board was not found");
             }
 
+            existingBoard.BoardDimension = board.BoardDimension;
+            existingBoard.IsTerminal = board.IsTerminal;
+
+            _dataContext.Boards.Update(board);
             _dataContext.SaveChanges();
             return true;
         }
@@ -42,11 +48,12 @@ namespace noughtsandcrosses.api.Repositories
         public bool DeleteBoard(Board board)
         {
             var existingBoard = _dataContext.Boards.FirstOrDefault(x => x.BoardId == board.BoardId);
-            if (existingBoard != null)
+            if (existingBoard == null)
             {
-                _dataContext.Boards.Remove(board);
+                throw new Exception("Board was not found.");
             }
 
+            _dataContext.Boards.Remove(board);
             _dataContext.SaveChanges();
             return true;
         }

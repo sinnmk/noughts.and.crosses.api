@@ -1,10 +1,10 @@
 ﻿using System.Collections.Generic;
 using noughtsandcrosses.api.Dtos;
+using noughtsandcrosses.api.Logic.Dtos;
 using noughtsandcrosses.api.Logic.Interfaces;
-using noughtsandcrosses.api.src.Dtos;
-using noughtsandcrosses.api.src.Repositories.Interfaces;
+using noughtsandcrosses.api.Repositories.Interfaces;
 
-namespace noughtsandcrosses.api.src.Logic
+namespace noughtsandcrosses.api.Logic
 {
     public class PlayerLogic : IPlayerLogic
     {

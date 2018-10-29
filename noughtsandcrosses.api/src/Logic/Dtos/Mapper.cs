@@ -1,9 +1,9 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using noughtsandcrosses.api.Dtos;
-using noughtsandcrosses.api.Models;
+using noughtsandcrosses.api.Repositories.Models;
 
-namespace noughtsandcrosses.api.src.Dtos
+namespace noughtsandcrosses.api.Logic.Dtos
 {
     public class Mapper
     {

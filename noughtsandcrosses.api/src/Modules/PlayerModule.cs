@@ -1,10 +1,9 @@
-﻿using Dash.Microservice.Core.Core;
-using noughtsandcrosses.api.Dtos;
+﻿using noughtsandcrosses.api.Dtos;
 using noughtsandcrosses.api.Logic.Interfaces;
 using Nancy;
 using Nancy.IO;
 
-namespace noughtsandcrosses.api.src.Modules
+namespace noughtsandcrosses.api.Modules
 {
     public class PlayerModule : NancyModule
     {

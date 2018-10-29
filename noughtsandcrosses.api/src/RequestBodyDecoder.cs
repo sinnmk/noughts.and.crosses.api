@@ -1,9 +1,8 @@
 ﻿using System.Text;
-using noughtsandcrosses.api;
 using Nancy.IO;
 using Newtonsoft.Json;
 
-namespace Dash.Microservice.Core.Core
+namespace noughtsandcrosses.api
 {
     public static class RequestBodyDecoder
     {
@@ -39,14 +38,6 @@ namespace Dash.Microservice.Core.Core
             });
         }
 
-        public static dynamic DecodeFromSnakeCase(string jsonText)
-        {
-            return JsonConvert.DeserializeObject<dynamic>(jsonText, new JsonSerializerSettings
-            {
-                ContractResolver = new SnakeCaseContractResolver()
-            });
-        }
-
         public static T DecodeFromSnakeCase<T>(string jsonText)
         {
             return JsonConvert.DeserializeObject<T>(jsonText, new JsonSerializerSettings
@@ -55,5 +46,4 @@ namespace Dash.Microservice.Core.Core
             });
         }
     }
-
 }

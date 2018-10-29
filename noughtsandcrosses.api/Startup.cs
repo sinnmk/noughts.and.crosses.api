@@ -1,34 +1,44 @@
-﻿using Microsoft.AspNetCore.Builder;
+﻿using System.IO;
+using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using noughtsandcrosses.api.Repositories;
+using Nancy;
 using Nancy.Owin;
+using IApplicationBuilder = Microsoft.AspNetCore.Builder.IApplicationBuilder;
 
 namespace noughtsandcrosses.api
 {
     public class Startup
     {
-        public Startup(IConfiguration configuration)
+        private readonly IConfiguration config;
+        public Startup(IHostingEnvironment env)
         {
-            Configuration = configuration;
-        }
+            using (var client = new DataContext())
+            {
+                client.Database.EnsureCreated();
 
-        public IConfiguration Configuration { get; }
+            }
+
+            var builder = new ConfigurationBuilder()
+                .SetBasePath(Directory.GetCurrentDirectory())
+                .AddJsonFile("appsettings.json")
+                .AddEnvironmentVariables();
+
+            config = builder.Build();
+        }
 
         public void ConfigureServices(IServiceCollection services)
         {
-
-            services.AddMvc();
+            services.AddEntityFrameworkSqlite().AddDbContext<DataContext>();
         }
 
-        public void Configure(IApplicationBuilder app, IHostingEnvironment env)
+        public void Configure(IApplicationBuilder app)
         {
-            if (env.IsDevelopment())
-            {
-                app.UseDeveloperExceptionPage();
-            }
-
-            app.UseOwin(x => x.UseNancy());
+            app.UseOwin(x => x.UseNancy(opt => opt.Bootstrapper = new DefaultNancyBootstrapper()));
+            app.UseStaticFiles();
         }
     }
 }

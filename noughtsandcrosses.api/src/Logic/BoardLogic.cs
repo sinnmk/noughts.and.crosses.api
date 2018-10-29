@@ -1,10 +1,9 @@
 ﻿using System.Collections.Generic;
-using noughtsandcrosses.api.Dtos;
+using noughtsandcrosses.api.Logic.Dtos;
 using noughtsandcrosses.api.Logic.Interfaces;
 using noughtsandcrosses.api.Repositories.Interfaces;
-using noughtsandcrosses.api.src.Dtos;
 
-namespace noughtsandcrosses.api.src.Logic
+namespace noughtsandcrosses.api.Logic
 {
     public class BoardLogic : IBoardLogic
     {
@@ -23,7 +22,7 @@ namespace noughtsandcrosses.api.src.Logic
 
         public BoardDto CreateBoard(BoardDto boardDto)
         {
-            var board = _boardRepository.CreateBoard(Mapper.MapBoardDtoToBoard(boardDto));
+            var board = _boardRepository.AddBoard(Mapper.MapBoardDtoToBoard(boardDto));
             return Mapper.MapBoardToBoardDto(board);
         }
 

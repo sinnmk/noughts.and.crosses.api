@@ -1,6 +1,5 @@
 ﻿using System.Collections.Generic;
 using noughtsandcrosses.api.Dtos;
-using noughtsandcrosses.api.Models;
 
 namespace noughtsandcrosses.api.Logic.Interfaces
 {

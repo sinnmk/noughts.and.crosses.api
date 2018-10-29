@@ -1,7 +1,8 @@
 ﻿using noughtsandcrosses.api.Repositories.Interfaces;
-using noughtsandcrosses.Server.Repositories.Models;
+using noughtsandcrosses.api.Repositories.Models;
+using noughtsandcrosses.Server.Modules;
 
-namespace noughtsandcrosses.Server.Modules
+namespace noughtsandcrosses.api.Repositories
 {
     public class SignUpRepository: ISignUpRepository
     {

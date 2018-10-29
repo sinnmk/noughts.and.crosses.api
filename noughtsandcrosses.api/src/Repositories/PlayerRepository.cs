@@ -1,10 +1,9 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
-using noughtsandcrosses.api.Models;
 using noughtsandcrosses.api.Repositories.Interfaces;
-using noughtsandcrosses.api.src.Repositories.Interfaces;
+using noughtsandcrosses.api.Repositories.Models;
 
-namespace noughtsandcrosses.api.src.Repositories
+namespace noughtsandcrosses.api.Repositories
 {
     public class PlayerRepository: IPlayerRepository
     {
@@ -17,18 +16,10 @@ namespace noughtsandcrosses.api.src.Repositories
 
         public Player AddPlayer(Player player)
         {
-            var newPlayer = new Player()
-            {
-                PlayerLevel = player.PlayerLevel,
-                PlayerName = player.PlayerName
-            };
+            var newPlayer = new Player{ PlayerLevel = 1, PlayerName = "Name" };
+            _dataContext.Players.Add(newPlayer);
             _dataContext.SaveChanges();
             return newPlayer;
-        }
-
-        public Player GetPlayer()
-        {
-            return _dataContext.Players.First();
         }
 
         public List<Player> GetPlayers()

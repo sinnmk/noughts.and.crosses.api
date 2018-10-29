@@ -1,6 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using noughtsandcrosses.api.Models;
-using noughtsandcrosses.Server.Repositories.Models;
+using noughtsandcrosses.api.Repositories.Models;
 
 namespace noughtsandcrosses.api.Repositories.Interfaces
 {
@@ -9,7 +8,6 @@ namespace noughtsandcrosses.api.Repositories.Interfaces
         DbSet<Game> Games { get; set; }
         DbSet<Board> Boards { get; set; }
         DbSet<Player> Players { get; set; }
-        DbSet<SignUp> SignUps { get; set; }
         int SaveChanges();
     }
 }

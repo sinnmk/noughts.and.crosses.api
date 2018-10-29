@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
-using noughtsandcrosses.api.Models;
+using noughtsandcrosses.api.Repositories.Models;
 
-namespace noughtsandcrosses.api.src.Repositories.Interfaces
+namespace noughtsandcrosses.api.Repositories.Interfaces
 {
     public interface IPlayerRepository
     {

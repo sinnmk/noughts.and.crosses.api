@@ -1,4 +1,4 @@
-﻿using noughtsandcrosses.Server.Repositories.Models;
+﻿using noughtsandcrosses.api.Repositories.Models;
 
 namespace noughtsandcrosses.Server.Modules
 {
