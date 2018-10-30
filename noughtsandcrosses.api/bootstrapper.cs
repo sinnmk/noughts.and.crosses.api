@@ -1,7 +1,6 @@
 ﻿using Microsoft.AspNetCore.Server.Kestrel.Core;
 using noughtsandcrosses.api.Repositories;
 using noughtsandcrosses.api.Repositories.Interfaces;
-using noughtsandcrosses.Server.Modules;
 using Nancy;
 using Nancy.TinyIoc;
 
@@ -17,7 +16,6 @@ namespace noughtsandcrosses.api
             container.Register<IBoardRepository, BoardRespository>().AsMultiInstance();
             container.Register<IGameRepository, GameRepository>().AsMultiInstance();
             container.Register<IPlayerRepository, PlayerRepository>().AsMultiInstance();
-            container.Register<ISignUpRepository, SignUpRepository>().AsMultiInstance();
         }
     }
 }

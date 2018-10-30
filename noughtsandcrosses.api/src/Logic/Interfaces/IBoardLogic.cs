@@ -8,6 +8,6 @@ namespace noughtsandcrosses.api.Logic.Interfaces
         List<BoardDto> GetBoards();
         BoardDto CreateBoard(BoardDto boardDto);
         bool UpdateBoard(BoardDto boardDto);
-        bool DeleteBoard(BoardDto boardDto);
+        bool DeleteBoard(int boardId);
     }
 }

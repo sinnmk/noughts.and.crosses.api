@@ -5,9 +5,9 @@ namespace noughtsandcrosses.api.Repositories.Interfaces
 {
     public interface IGameRepository
     {
+        List<Game> GetGames();
         Game AddGame(Game game);
         bool UpdateGame(Game game);
-        bool DeleteGame(Game game);
-        List<Game> GetGames();
+        bool DeleteGame(int id);
     }
 }

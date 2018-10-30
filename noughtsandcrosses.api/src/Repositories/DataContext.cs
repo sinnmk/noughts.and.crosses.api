@@ -13,14 +13,5 @@ namespace noughtsandcrosses.api.Repositories
         {
             optionsBuilder.UseSqlite("Filename=databasefile.db");
         }
-//        protected override void OnModelCreating(ModelBuilder modelBuilder)
-//        {
-//            modelBuilder.Entity<Board>(entity =>
-//            {
-//                entity.HasKey(p => p.BoardId);
-//            });
-//
-//            base.OnModelCreating(modelBuilder);
-//        }
     }
 }

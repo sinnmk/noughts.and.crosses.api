@@ -8,7 +8,7 @@ using noughtsandcrosses.api.Repositories;
 namespace noughtsandcrosses.api.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20181029163332_initialCreate")]
+    [Migration("20181030144050_initialCreate")]
     partial class initialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -23,6 +23,8 @@ namespace noughtsandcrosses.api.Migrations
                         .ValueGeneratedOnAdd();
 
                     b.Property<int>("BoardDimension");
+
+                    b.Property<string>("BoardState");
 
                     b.Property<bool>("IsTerminal");
 

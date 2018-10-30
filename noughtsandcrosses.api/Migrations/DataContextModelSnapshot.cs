@@ -22,6 +22,8 @@ namespace noughtsandcrosses.api.Migrations
 
                     b.Property<int>("BoardDimension");
 
+                    b.Property<string>("BoardState");
+
                     b.Property<bool>("IsTerminal");
 
                     b.HasKey("BoardId");

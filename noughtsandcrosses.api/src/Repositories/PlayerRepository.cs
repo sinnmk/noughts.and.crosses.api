@@ -26,5 +26,17 @@ namespace noughtsandcrosses.api.Repositories
         {
             return _dataContext.Players.ToList();
         }
+
+        public bool UpdatePlayer(Player player)
+        {
+            var existingPlayers = _dataContext.Players.FirstOrDefault(x => x.PlayerId == player.PlayerId);
+            if (existingPlayers == null) throw new System.Exception("Player is not found");
+
+            existingPlayers.PlayerLevel = player.PlayerLevel;
+            existingPlayers.PlayerName = player.PlayerName;
+
+            _dataContext.SaveChanges();
+            return true;
+        }
     }
 }

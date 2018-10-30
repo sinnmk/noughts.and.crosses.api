@@ -26,5 +26,11 @@ namespace noughtsandcrosses.api.Logic
             var players = Mapper.MapPlayers(_playerRepository.GetPlayers());
             return players;
         }
+
+        public bool UpdatePlayer(PlayerDto playerDto)
+        {
+            _playerRepository.UpdatePlayer(Mapper.MapPlayerDtoToPlayer(playerDto));
+            return true;
+        }
     }
 }

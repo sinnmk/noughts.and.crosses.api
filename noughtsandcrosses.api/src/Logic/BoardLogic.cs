@@ -32,9 +32,9 @@ namespace noughtsandcrosses.api.Logic
             return true;
         }
 
-        public bool DeleteBoard(BoardDto boardDto)
+        public bool DeleteBoard(int boardId)
         {
-            _boardRepository.DeleteBoard(Mapper.MapBoardDtoToBoard(boardDto));
+            _boardRepository.DeleteBoard(boardId);
             return true;
         }
     }

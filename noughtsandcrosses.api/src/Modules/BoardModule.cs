@@ -12,8 +12,8 @@ namespace noughtsandcrosses.api.Modules
             Before += ctx => CheckAccess();
             Get("/", parameters => boardLogic.GetBoards());
             Post("/", parameters => boardLogic.CreateBoard(RequestBodyDecoder.DecodeFromSnakeCase<BoardDto>(Request.Body as RequestStream)));
-            Put("/", parameters => boardLogic.UpdateBoard(RequestBodyDecoder.DecodeFromSnakeCase<BoardDto>(Request.Body as RequestStream)));
-            Delete("/", parameters => boardLogic.DeleteBoard(RequestBodyDecoder.DecodeFromSnakeCase<BoardDto>(Request.Body as RequestStream)));
+            Put("/", parameters => boardLogic.UpdateBoard(RequestBodyDecoder.Decode<BoardDto>(Request.Body as RequestStream)));
+            Delete("/{BoardId:int}", parameters => boardLogic.DeleteBoard(parameters.BoardId));
         }
 
         private Response CheckAccess()

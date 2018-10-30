@@ -33,9 +33,9 @@ namespace noughtsandcrosses.api.Logic
             return true;
         }
 
-        public bool DeleteGame(GameDto gameDto)
+        public bool DeleteGame(int boardId)
         {
-            _gameRepository.DeleteGame(Mapper.MapGameDtoToGame(gameDto));
+            _gameRepository.DeleteGame(boardId);
             return true;
         }
     }

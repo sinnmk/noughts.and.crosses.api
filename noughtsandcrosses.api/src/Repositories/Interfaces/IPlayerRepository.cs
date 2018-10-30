@@ -7,5 +7,6 @@ namespace noughtsandcrosses.api.Repositories.Interfaces
     {
         Player AddPlayer(Player player);
         List<Player> GetPlayers();
+        bool UpdatePlayer(Player player);
     }
 }

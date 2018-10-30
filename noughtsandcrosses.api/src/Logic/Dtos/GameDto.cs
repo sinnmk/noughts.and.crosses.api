@@ -1,5 +1,4 @@
-﻿using System;
-namespace noughtsandcrosses.api.Dtos
+﻿namespace noughtsandcrosses.api.Logic.Dtos
 {
     public class GameDto
     {

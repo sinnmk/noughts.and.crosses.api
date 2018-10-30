@@ -7,5 +7,6 @@ namespace noughtsandcrosses.api.Logic.Interfaces
     {
         PlayerDto CreatePlayer(PlayerDto playerDto);
         List<PlayerDto> GetPlayers();
+        bool UpdatePlayer(PlayerDto playerDto);
     }
 }

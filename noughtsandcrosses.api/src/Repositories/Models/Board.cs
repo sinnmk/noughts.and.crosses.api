@@ -1,4 +1,6 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace noughtsandcrosses.api.Repositories.Models
 {
@@ -15,5 +17,6 @@ namespace noughtsandcrosses.api.Repositories.Models
         public int BoardDimension { get; set; }
         [Required]
         public bool IsTerminal { get; set; }
+        public string BoardState { get; set; }
     }
 }

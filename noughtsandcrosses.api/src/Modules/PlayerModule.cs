@@ -13,7 +13,8 @@ namespace noughtsandcrosses.api.Modules
             Before += ctx => CheckAccess();
 
             Get("/", parameters => playerLogic.GetPlayers());
-            Post("/create", parameters => playerLogic.CreatePlayer(RequestBodyDecoder.DecodeFromSnakeCase<PlayerDto>(Request.Body as RequestStream)));
+            Post("/", parameters => playerLogic.CreatePlayer(RequestBodyDecoder.DecodeFromSnakeCase<PlayerDto>(Request.Body as RequestStream)));
+            Put("/", parameters=> playerLogic.UpdatePlayer(RequestBodyDecoder.Decode<PlayerDto>(Request.Body as RequestStream)));
         }
 
         private Response CheckAccess()

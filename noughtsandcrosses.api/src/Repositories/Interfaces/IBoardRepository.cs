@@ -5,9 +5,9 @@ namespace noughtsandcrosses.api.Repositories.Interfaces
 {
     public interface IBoardRepository
     {
-        Board AddBoard(Board board);
         List<Board> GetBoards();
+        Board AddBoard(Board board);
         bool UpdateBoard(Board board);
-        bool DeleteBoard(Board board);
+        bool DeleteBoard(int id);
     }
 }

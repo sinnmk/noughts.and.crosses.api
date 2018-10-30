@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using noughtsandcrosses.api.Repositories.Interfaces;
 using noughtsandcrosses.api.Repositories.Models;
@@ -12,6 +13,11 @@ namespace noughtsandcrosses.api.Repositories
         public GameRepository(IDataContext dataContext)
         {
             _dataContext = dataContext;
+        }
+        public List<Game> GetGames()
+        {
+            var games = _dataContext.Games.ToList();
+            return games;
         }
 
         public Game AddGame(Game game)
@@ -35,22 +41,14 @@ namespace noughtsandcrosses.api.Repositories
             return true;
         }
 
-        public bool DeleteGame(Game game)
+        public bool DeleteGame(int id)
         {
-            var existingGame = _dataContext.Games.FirstOrDefault(x => x.GameId == game.GameId);
-            if (existingGame != null)
-            {
-                _dataContext.Games.Remove(game);
-            }
+            var gameToDelete = _dataContext.Games.FirstOrDefault(x => x.GameId == id);
+            if (gameToDelete == null) throw new Exception("Game not found");
 
+            _dataContext.Games.Remove(gameToDelete);
             _dataContext.SaveChanges();
             return true;
-        }
-
-        public List<Game> GetGames()
-        {
-            var games = _dataContext.Games.ToList();
-            return games;
         }
     }
 }

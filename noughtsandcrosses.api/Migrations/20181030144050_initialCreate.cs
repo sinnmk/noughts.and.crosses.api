@@ -13,7 +13,8 @@ namespace noughtsandcrosses.api.Migrations
                     BoardId = table.Column<int>(nullable: false)
                         .Annotation("Sqlite:Autoincrement", true),
                     BoardDimension = table.Column<int>(nullable: false),
-                    IsTerminal = table.Column<bool>(nullable: false)
+                    IsTerminal = table.Column<bool>(nullable: false),
+                    BoardState = table.Column<string>(nullable: true)
                 },
                 constraints: table =>
                 {
