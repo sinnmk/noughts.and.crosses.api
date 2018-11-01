@@ -1,0 +1,100 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+    <TypeScriptToolsVersion>2.8</TypeScriptToolsVersion>
+    <StartupObject></StartupObject>
+    <ApplicationIcon />
+    <OutputType>Exe</OutputType>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove=".server\_migrations\**" />
+    <Content Remove=".server\_migrations\**" />
+    <EmbeddedResource Remove=".server\_migrations\**" />
+    <None Remove=".server\_migrations\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove=".server\Program.cs~RF1f17dd86.TMP" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include=".server\bootstrapper.cs" />
+    <Compile Include=".server\Program.cs" />
+    <Compile Include=".server\src\Logic\BoardLogic.cs" />
+    <Compile Include=".server\src\Logic\Dtos\BoardDto.cs" />
+    <Compile Include=".server\src\Logic\Dtos\GameDto.cs" />
+    <Compile Include=".server\src\Logic\Dtos\Mapper.cs" />
+    <Compile Include=".server\src\Logic\Dtos\PlayerDto.cs" />
+    <Compile Include=".server\src\Logic\GameLogic.cs" />
+    <Compile Include=".server\src\Logic\Interfaces\IBoardLogic.cs" />
+    <Compile Include=".server\src\Logic\Interfaces\IGameLogic.cs" />
+    <Compile Include=".server\src\Logic\Interfaces\IPlayerLogic.cs" />
+    <Compile Include=".server\src\Logic\PlayerLogic.cs" />
+    <Compile Include=".server\src\Modules\BoardModule.cs" />
+    <Compile Include=".server\src\Modules\GameModule.cs" />
+    <Compile Include=".server\src\Modules\PlayerModule.cs" />
+    <Compile Include=".server\src\Repositories\BoardRespository.cs" />
+    <Compile Include=".server\src\Repositories\DataContext.cs" />
+    <Compile Include=".server\src\Repositories\GameRepository.cs" />
+    <Compile Include=".server\src\Repositories\Interfaces\IBoardRepository.cs" />
+    <Compile Include=".server\src\Repositories\Interfaces\IDataContext.cs" />
+    <Compile Include=".server\src\Repositories\Interfaces\IGameRepository.cs" />
+    <Compile Include=".server\src\Repositories\Interfaces\IPlayerRepository.cs" />
+    <Compile Include=".server\src\Repositories\Models\Board.cs" />
+    <Compile Include=".server\src\Repositories\Models\Game.cs" />
+    <Compile Include=".server\src\Repositories\Models\Player.cs" />
+    <Compile Include=".server\src\Repositories\Models\SignUp.cs" />
+    <Compile Include=".server\src\Repositories\PlayerRepository.cs" />
+    <Compile Include=".server\src\RequestBodyDecoder.cs" />
+    <Compile Include=".server\src\SnakeCaseContractResolver.cs" />
+    <Compile Include=".server\Startup.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include=".server\appsettings.Development.json" />
+    <Content Include=".server\appsettings.json" />
+    <Content Include=".server\src\web.config" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="wwwroot\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="axios" Version="0.16.2" />
+    <PackageReference Include="DotNetify.Core" Version="3.1.0" />
+    <PackageReference Include="DotNetify.SignalR.Owin" Version="3.1.0" />
+    <PackageReference Include="JsonConfig" Version="1.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.9" />
+    <PackageReference Include="Microsoft.AspNetCore.Cors" Version="2.2.0-preview3-35497" />
+    <PackageReference Include="Microsoft.AspNetCore.Server.Kestrel" Version="2.2.0-preview2-35157" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="2.1.4" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="2.1.4" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="2.1.4" />
+    <PackageReference Include="Moq" Version="4.10.0" />
+    <PackageReference Include="Nancy" Version="2.0.0-clinteastwood" />
+    <PackageReference Include="Nancy.Serialization.JsonNet" Version="2.0.0-clinteastwood" />
+    <PackageReference Include="Nancy.Testing" Version="2.0.0-clinteastwood" />
+    <PackageReference Include="React.AspNet" Version="3.4.1" />
+    <PackageReference Include="RouteJs.AspNet" Version="2.2.0" />
+    <PackageReference Include="xunit" Version="2.4.1" />
+    <PackageReference Include="xunit.runner.console" Version="2.4.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <DotNetCliToolReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Tools" Version="2.0.4" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <DotNetCliToolReference Include="Microsoft.EntityFrameworkCore.Tools.DotNet">
+      <Version>2.0.0-*</Version>
+    </DotNetCliToolReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include=".server\noughtsandcrosses.api.csproj.DotSettings" />
+    <None Include=".server\src\Logic\Dtos\BoardDto.cs~RF1f93317c.TMP" />
+  </ItemGroup>
+</Project>
