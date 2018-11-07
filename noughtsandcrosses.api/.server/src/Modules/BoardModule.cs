@@ -13,7 +13,7 @@ namespace NoughtsAndCrosses.Server.Src.Modules
         {
             Before += ctx => CheckAccess();
             Get("/", parameters => boardLogic.GetBoards());
-            Post("/", parameters => boardLogic.CreateBoard(RequestBodyDecoder.DecodeFromSnakeCase<BoardDto>(Request.Body as RequestStream)));
+            Post("/", parameters => boardLogic.CreateBoard(RequestBodyDecoder.Decode<BoardDto>(Request.Body as RequestStream)));
             Put("/", parameters => boardLogic.UpdateBoard(RequestBodyDecoder.Decode<BoardDto>(Request.Body as RequestStream)));
             Delete("/{BoardId:int}", parameters => boardLogic.DeleteBoard(parameters.BoardId));
         }

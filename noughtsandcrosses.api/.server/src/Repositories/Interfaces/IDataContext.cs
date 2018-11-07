@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore;
 using NoughtsAndCrosses.Server.Src.Repositories.Models;
 
 namespace NoughtsAndCrosses.Server.Src.Repositories.Interfaces
@@ -9,5 +10,6 @@ namespace NoughtsAndCrosses.Server.Src.Repositories.Interfaces
         DbSet<Board> Boards { get; set; }
         DbSet<Player> Players { get; set; }
         int SaveChanges();
+        Task SaveChangesAsync();
     }
 }

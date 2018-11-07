@@ -11,7 +11,7 @@ namespace NoughtsAndCrosses.Server.Src.Modules
         {
             Before += ctx => CheckAccess();
             Get("/", parameters => gameLogic.GetGames());
-            Post("/", parameters => gameLogic.CreateGame(RequestBodyDecoder.DecodeFromSnakeCase<GameDto>(Request.Body as RequestStream)) );
+            Post("/", parameters => gameLogic.CreateGame(RequestBodyDecoder.Decode<GameDto>(Request.Body as RequestStream)) );
             Put("/", parameters => gameLogic.UpdateGame(RequestBodyDecoder.Decode<GameDto>(Request.Body as RequestStream)));
             Delete("/{GameId:int}", parameters => gameLogic.DeleteGame(parameters.GameId));
         }

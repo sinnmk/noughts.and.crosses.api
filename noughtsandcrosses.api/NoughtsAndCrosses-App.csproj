@@ -77,7 +77,10 @@
     <PackageReference Include="Nancy" Version="2.0.0-clinteastwood" />
     <PackageReference Include="Nancy.Serialization.JsonNet" Version="2.0.0-clinteastwood" />
     <PackageReference Include="Nancy.Testing" Version="2.0.0-clinteastwood" />
-    <PackageReference Include="React.AspNet" Version="3.4.1" />
+    <PackageReference Include="React.AspNet" Version="4.0.0-beta5" />
+    <PackageReference Include="React.Core" Version="4.0.0-beta5" />
+    <PackageReference Include="react.js" Version="0.14.7" />
+    <PackageReference Include="React.Router" Version="4.0.0-beta5" />
     <PackageReference Include="RouteJs.AspNet" Version="2.2.0" />
     <PackageReference Include="xunit" Version="2.4.1" />
     <PackageReference Include="xunit.runner.console" Version="2.4.1" />
@@ -95,6 +98,5 @@
 
   <ItemGroup>
     <None Include=".server\noughtsandcrosses.api.csproj.DotSettings" />
-    <None Include=".server\src\Logic\Dtos\BoardDto.cs~RF1f93317c.TMP" />
   </ItemGroup>
 </Project>

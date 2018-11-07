@@ -1,6 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore.Migrations;
 
-namespace noughtsandcrosses.api.Migrations
+namespace NoughtsAndCrossesApp.Migrations
 {
     public partial class initialCreate : Migration
     {
@@ -27,6 +27,9 @@ namespace noughtsandcrosses.api.Migrations
                 {
                     GameId = table.Column<int>(nullable: false)
                         .Annotation("Sqlite:Autoincrement", true),
+                    TurnChoice = table.Column<int>(nullable: false),
+                    GameLevel = table.Column<int>(nullable: false),
+                    BoardDimension = table.Column<int>(nullable: false),
                     IsGameOver = table.Column<bool>(nullable: false),
                     IsGameWon = table.Column<bool>(nullable: false)
                 },

@@ -44,10 +44,10 @@ namespace App.server
 
         public void Configure(IApplicationBuilder app)
         {
+            app.UseCors("CorsPolicy");
             app.UseOwin(x => x.UseNancy(opt => opt.Bootstrapper = new DefaultNancyBootstrapper()));
             app.UseDefaultFiles();
             app.UseStaticFiles();
-            app.UseCors("CorsPolicy");
         }
     }
 }

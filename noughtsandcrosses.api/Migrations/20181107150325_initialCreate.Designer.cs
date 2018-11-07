@@ -3,12 +3,12 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using noughtsandcrosses.api.Repositories;
+using NoughtsAndCrosses.Server.Src.Repositories;
 
-namespace noughtsandcrosses.api.Migrations
+namespace NoughtsAndCrossesApp.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20181030144050_initialCreate")]
+    [Migration("20181107150325_initialCreate")]
     partial class initialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -17,7 +17,7 @@ namespace noughtsandcrosses.api.Migrations
             modelBuilder
                 .HasAnnotation("ProductVersion", "2.1.4-rtm-31024");
 
-            modelBuilder.Entity("noughtsandcrosses.api.Repositories.Models.Board", b =>
+            modelBuilder.Entity("NoughtsAndCrosses.Server.Src.Repositories.Models.Board", b =>
                 {
                     b.Property<int>("BoardId")
                         .ValueGeneratedOnAdd();
@@ -33,21 +33,27 @@ namespace noughtsandcrosses.api.Migrations
                     b.ToTable("Boards");
                 });
 
-            modelBuilder.Entity("noughtsandcrosses.api.Repositories.Models.Game", b =>
+            modelBuilder.Entity("NoughtsAndCrosses.Server.Src.Repositories.Models.Game", b =>
                 {
                     b.Property<int>("GameId")
                         .ValueGeneratedOnAdd();
 
+                    b.Property<int>("BoardDimension");
+
+                    b.Property<int>("GameLevel");
+
                     b.Property<bool>("IsGameOver");
 
                     b.Property<bool>("IsGameWon");
+
+                    b.Property<int>("TurnChoice");
 
                     b.HasKey("GameId");
 
                     b.ToTable("Games");
                 });
 
-            modelBuilder.Entity("noughtsandcrosses.api.Repositories.Models.Player", b =>
+            modelBuilder.Entity("NoughtsAndCrosses.Server.Src.Repositories.Models.Player", b =>
                 {
                     b.Property<int>("PlayerId")
                         .ValueGeneratedOnAdd();

@@ -7,8 +7,12 @@ namespace NoughtsAndCrosses.Server.Src.Repositories.Models
         [Key]
         public int GameId { get; set; }
         [Required]
-        public bool IsGameOver { get; set; }
+        public int TurnChoice { get; set; }
         [Required]
+        public int GameLevel { get; set; }
+        public int BoardDimension { get; set; }
+        [Required]
+        public bool IsGameOver { get; set; }
         public bool IsGameWon { get; set; }
     }
 }

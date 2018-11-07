@@ -68,6 +68,9 @@ namespace NoughtsAndCrosses.Server.Src.Logic.Dtos
             var newGame = new Game()
             {
                 GameId = gameDto.GameId,
+                TurnChoice = gameDto.TurnChoice,
+                GameLevel = gameDto.GameLevel,
+                BoardDimension = gameDto.BoardDimension,
                 IsGameOver = gameDto.IsGameOver,
                 IsGameWon = gameDto.IsGameWon
             };
@@ -79,6 +82,9 @@ namespace NoughtsAndCrosses.Server.Src.Logic.Dtos
             var newGameDto = new GameDto()
             {
                 GameId = game.GameId,
+                TurnChoice = game.TurnChoice,
+                GameLevel = game.GameLevel,
+                BoardDimension = game.BoardDimension,
                 IsGameOver = game.IsGameOver,
                 IsGameWon = game.IsGameWon
             };
@@ -90,8 +96,11 @@ namespace NoughtsAndCrosses.Server.Src.Logic.Dtos
             return games.Select(game => new GameDto
             {
                 GameId = game.GameId,
-                IsGameWon = game.IsGameWon,
-                IsGameOver = game.IsGameOver
+                TurnChoice = game.TurnChoice,
+                GameLevel = game.GameLevel,
+                BoardDimension = game.BoardDimension,
+                IsGameOver = game.IsGameOver,
+                IsGameWon = game.IsGameWon
             }).ToList();
         }
 

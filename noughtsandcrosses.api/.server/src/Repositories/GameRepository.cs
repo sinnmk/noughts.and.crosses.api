@@ -24,6 +24,10 @@ namespace NoughtsAndCrosses.Server.Src.Repositories
         {
             var newGame = new Game
             {
+                GameId = game.GameId,
+                TurnChoice = game.TurnChoice,
+                GameLevel = game.GameLevel,
+                BoardDimension = game.BoardDimension,
                 IsGameOver = game.IsGameOver,
                 IsGameWon = game.IsGameWon
             };
@@ -37,6 +41,10 @@ namespace NoughtsAndCrosses.Server.Src.Repositories
             var existingGame = _dataContext.Games.FirstOrDefault(x => x.GameId == game.GameId);
             if (existingGame != null)
             {
+                existingGame.GameId = game.GameId;
+                existingGame.BoardDimension = game.BoardDimension;
+                existingGame.GameLevel = game.GameLevel;
+                existingGame.TurnChoice = game.TurnChoice;
                 existingGame.IsGameOver = game.IsGameOver;
                 existingGame.IsGameWon = game.IsGameWon;
             }
@@ -56,3 +64,4 @@ namespace NoughtsAndCrosses.Server.Src.Repositories
         }
     }
 }
+

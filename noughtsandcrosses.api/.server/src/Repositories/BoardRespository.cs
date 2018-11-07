@@ -15,12 +15,6 @@ namespace NoughtsAndCrosses.Server.Src.Repositories
             _dataContext = dataContext;
         }
 
-//        public Board GetBoard()
-//        {
-//            var board = _dataContext.Boards.First();
-//            return board;
-//        }
-
         public List<Board> GetBoards()
         {
             var boards = _dataContext.Boards.ToList();
