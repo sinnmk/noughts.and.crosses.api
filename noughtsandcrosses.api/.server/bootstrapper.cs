@@ -4,7 +4,6 @@ using Nancy.Bootstrapper;
 using Nancy.TinyIoc;
 using NoughtsAndCrosses.Server.Src.Repositories;
 using NoughtsAndCrosses.Server.Src.Repositories.Interfaces;
-using React;
 
 namespace NoughtsAndCrosses.Server
 {

@@ -8,7 +8,7 @@ using NoughtsAndCrosses.Server.Src.Repositories;
 namespace NoughtsAndCrossesApp.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20181107150325_initialCreate")]
+    [Migration("20181109144113_initialCreate")]
     partial class initialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

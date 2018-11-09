@@ -31,7 +31,7 @@ namespace App.server
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddEntityFrameworkSqlite().AddDbContext<DataContext>();
-            services.AddMvc();
+//            services.AddMvc();
             services.AddCors(options =>
             {
                 options.AddPolicy("CorsPolicy",
