@@ -5,7 +5,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Nancy;
 using Nancy.Owin;
-using NoughtsAndCrosses.Server.Src.Repositories;
+using NoughtsAndCrosses.Src.Repositories;
 using IApplicationBuilder = Microsoft.AspNetCore.Builder.IApplicationBuilder;
 
 namespace App.server

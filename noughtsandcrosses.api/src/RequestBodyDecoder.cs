@@ -3,7 +3,7 @@ using noughtsandcrosses.api;
 using Nancy.IO;
 using Newtonsoft.Json;
 
-namespace NoughtsAndCrosses.Server.Src
+namespace NoughtsAndCrosses.Src
 {
     public static class RequestBodyDecoder
     {

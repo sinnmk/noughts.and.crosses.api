@@ -2,7 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using NoughtsAndCrosses.Server.Src.Repositories;
+using NoughtsAndCrosses.Src.Repositories;
 
 namespace NoughtsAndCrossesApp.Migrations
 {

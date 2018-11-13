@@ -1,8 +1,8 @@
 ﻿using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
-using NoughtsAndCrosses.Server.Src.Repositories.Models;
+using NoughtsAndCrosses.Src.Repositories.Models;
 
-namespace NoughtsAndCrosses.Server.Src.Repositories.Interfaces
+namespace NoughtsAndCrosses.Src.Repositories.Interfaces
 {
     public interface IDataContext
     {

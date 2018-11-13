@@ -1,10 +1,10 @@
 ﻿using Microsoft.AspNetCore.Cors;
 using Nancy;
 using Nancy.IO;
-using NoughtsAndCrosses.Server.Src.Logic.Dtos;
-using NoughtsAndCrosses.Server.Src.Logic.Interfaces;
+using NoughtsAndCrosses.Src.Logic.Dtos;
+using NoughtsAndCrosses.Src.Logic.Interfaces;
 
-namespace NoughtsAndCrosses.Server.Src.Modules
+namespace NoughtsAndCrosses.Src.Modules
 {
     [EnableCors]
     public class BoardModule: NancyModule

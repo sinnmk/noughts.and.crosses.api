@@ -2,7 +2,7 @@
 using App.server;
 using Microsoft.AspNetCore.Hosting;
 
-namespace NoughtsAndCrosses.Server
+namespace NoughtsAndCrosses
 {
     public class Program
     {

@@ -1,9 +1,9 @@
 ﻿using Xunit;
 using Moq;
-using NoughtsAndCrosses.Server.Src.Logic;
-using NoughtsAndCrosses.Server.Src.Logic.Dtos;
-using NoughtsAndCrosses.Server.Src.Repositories.Interfaces;
-using NoughtsAndCrosses.Server.Src.Repositories.Models;
+using NoughtsAndCrosses.Src.Logic;
+using NoughtsAndCrosses.Src.Logic.Dtos;
+using NoughtsAndCrosses.Src.Repositories.Interfaces;
+using NoughtsAndCrosses.Src.Repositories.Models;
 
 namespace TestTicTacToe.LogicSpecs
 {

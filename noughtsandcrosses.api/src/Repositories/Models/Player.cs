@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace NoughtsAndCrosses.Server.Src.Repositories.Models
+namespace NoughtsAndCrosses.Src.Repositories.Models
 {
     public class Player
     {

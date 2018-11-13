@@ -9,18 +9,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove=".server\_migrations\**" />
-    <Content Remove=".server\_migrations\**" />
-    <EmbeddedResource Remove=".server\_migrations\**" />
-    <None Remove=".server\_migrations\**" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <None Remove=".server\Program.cs~RF1f17dd86.TMP" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include=".server\" />
     <Folder Include="wwwroot\" />
   </ItemGroup>
 

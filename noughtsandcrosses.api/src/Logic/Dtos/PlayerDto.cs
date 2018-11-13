@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace NoughtsAndCrosses.Server.Src.Logic.Dtos
+namespace NoughtsAndCrosses.Src.Logic.Dtos
 {
     public class PlayerDto
     {

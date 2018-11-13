@@ -2,10 +2,10 @@
 using Nancy;
 using Nancy.Bootstrapper;
 using Nancy.TinyIoc;
-using NoughtsAndCrosses.Server.Src.Repositories;
-using NoughtsAndCrosses.Server.Src.Repositories.Interfaces;
+using NoughtsAndCrosses.Src.Repositories;
+using NoughtsAndCrosses.Src.Repositories.Interfaces;
 
-namespace NoughtsAndCrosses.Server
+namespace NoughtsAndCrosses
 {
     public class Bootstrapper: DefaultNancyBootstrapper
     {

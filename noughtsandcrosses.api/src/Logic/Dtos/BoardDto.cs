@@ -1,4 +1,4 @@
-﻿namespace NoughtsAndCrosses.Server.Src.Logic.Dtos
+﻿namespace NoughtsAndCrosses.Src.Logic.Dtos
 {
     public class BoardDto
     {

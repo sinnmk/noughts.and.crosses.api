@@ -1,9 +1,9 @@
 ﻿using System.Collections.Generic;
-using NoughtsAndCrosses.Server.Src.Logic.Dtos;
-using NoughtsAndCrosses.Server.Src.Logic.Interfaces;
-using NoughtsAndCrosses.Server.Src.Repositories.Interfaces;
+using NoughtsAndCrosses.Src.Logic.Dtos;
+using NoughtsAndCrosses.Src.Logic.Interfaces;
+using NoughtsAndCrosses.Src.Repositories.Interfaces;
 
-namespace NoughtsAndCrosses.Server.Src.Logic
+namespace NoughtsAndCrosses.Src.Logic
 {
     public class PlayerLogic : IPlayerLogic
     {

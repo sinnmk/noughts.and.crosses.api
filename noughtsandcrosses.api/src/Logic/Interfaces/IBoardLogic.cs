@@ -1,8 +1,8 @@
 ﻿using System.Collections.Generic;
-using NoughtsAndCrosses.Server.Src.Logic.Dtos;
-using NoughtsAndCrosses.Server.Src.Repositories.Models;
+using NoughtsAndCrosses.Src.Repositories.Models;
+using NoughtsAndCrosses.Src.Logic.Dtos;
 
-namespace NoughtsAndCrosses.Server.Src.Logic.Interfaces
+namespace NoughtsAndCrosses.Src.Logic.Interfaces
 {
     public interface IBoardLogic
     {
