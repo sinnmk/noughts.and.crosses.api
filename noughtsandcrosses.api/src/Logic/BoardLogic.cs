@@ -2,7 +2,6 @@
 using NoughtsAndCrosses.Server.Src.Logic.Dtos;
 using NoughtsAndCrosses.Server.Src.Logic.Interfaces;
 using NoughtsAndCrosses.Server.Src.Repositories.Interfaces;
-using NoughtsAndCrosses.Server.Src.Repositories.Models;
 
 namespace NoughtsAndCrosses.Server.Src.Logic
 {

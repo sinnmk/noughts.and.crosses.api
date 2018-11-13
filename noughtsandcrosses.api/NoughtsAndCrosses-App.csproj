@@ -20,45 +20,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Compile Include=".server\bootstrapper.cs" />
-    <Compile Include=".server\Program.cs" />
-    <Compile Include=".server\src\Logic\BoardLogic.cs" />
-    <Compile Include=".server\src\Logic\Dtos\BoardDto.cs" />
-    <Compile Include=".server\src\Logic\Dtos\GameDto.cs" />
-    <Compile Include=".server\src\Logic\Dtos\Mapper.cs" />
-    <Compile Include=".server\src\Logic\Dtos\PlayerDto.cs" />
-    <Compile Include=".server\src\Logic\GameLogic.cs" />
-    <Compile Include=".server\src\Logic\Interfaces\IBoardLogic.cs" />
-    <Compile Include=".server\src\Logic\Interfaces\IGameLogic.cs" />
-    <Compile Include=".server\src\Logic\Interfaces\IPlayerLogic.cs" />
-    <Compile Include=".server\src\Logic\PlayerLogic.cs" />
-    <Compile Include=".server\src\Modules\BoardModule.cs" />
-    <Compile Include=".server\src\Modules\GameModule.cs" />
-    <Compile Include=".server\src\Modules\PlayerModule.cs" />
-    <Compile Include=".server\src\Repositories\BoardRespository.cs" />
-    <Compile Include=".server\src\Repositories\DataContext.cs" />
-    <Compile Include=".server\src\Repositories\GameRepository.cs" />
-    <Compile Include=".server\src\Repositories\Interfaces\IBoardRepository.cs" />
-    <Compile Include=".server\src\Repositories\Interfaces\IDataContext.cs" />
-    <Compile Include=".server\src\Repositories\Interfaces\IGameRepository.cs" />
-    <Compile Include=".server\src\Repositories\Interfaces\IPlayerRepository.cs" />
-    <Compile Include=".server\src\Repositories\Models\Board.cs" />
-    <Compile Include=".server\src\Repositories\Models\Game.cs" />
-    <Compile Include=".server\src\Repositories\Models\Player.cs" />
-    <Compile Include=".server\src\Repositories\Models\SignUp.cs" />
-    <Compile Include=".server\src\Repositories\PlayerRepository.cs" />
-    <Compile Include=".server\src\RequestBodyDecoder.cs" />
-    <Compile Include=".server\src\SnakeCaseContractResolver.cs" />
-    <Compile Include=".server\Startup.cs" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Content Include=".server\appsettings.Development.json" />
-    <Content Include=".server\appsettings.json" />
-    <Content Include=".server\src\web.config" />
-  </ItemGroup>
-
-  <ItemGroup>
+    <Folder Include=".server\" />
     <Folder Include="wwwroot\" />
   </ItemGroup>
 
@@ -82,8 +44,8 @@
     <PackageReference Include="react.js" Version="0.14.7" />
     <PackageReference Include="React.Router" Version="4.0.0-beta5" />
     <PackageReference Include="RouteJs.AspNet" Version="2.2.0" />
-    <PackageReference Include="xunit" Version="2.4.1" />
-    <PackageReference Include="xunit.runner.console" Version="2.4.1" />
+    <PackageReference Include="xunit" Version="2.3.1" />
+    <PackageReference Include="xunit.runner.console" Version="2.3.1" />
   </ItemGroup>
 
   <ItemGroup>
@@ -94,9 +56,5 @@
     <DotNetCliToolReference Include="Microsoft.EntityFrameworkCore.Tools.DotNet">
       <Version>2.0.0-*</Version>
     </DotNetCliToolReference>
-  </ItemGroup>
-
-  <ItemGroup>
-    <None Include=".server\noughtsandcrosses.api.csproj.DotSettings" />
   </ItemGroup>
 </Project>

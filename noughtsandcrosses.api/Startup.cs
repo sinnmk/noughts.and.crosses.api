@@ -22,7 +22,7 @@ namespace App.server
 
             var builder = new ConfigurationBuilder()
                 .SetBasePath(Directory.GetCurrentDirectory())
-                .AddJsonFile(".server/appsettings.json")
+                .AddJsonFile("appsettings.json")
                 .AddEnvironmentVariables();
 
             config = builder.Build();
@@ -31,7 +31,6 @@ namespace App.server
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddEntityFrameworkSqlite().AddDbContext<DataContext>();
-//            services.AddMvc();
             services.AddCors(options =>
             {
                 options.AddPolicy("CorsPolicy",
