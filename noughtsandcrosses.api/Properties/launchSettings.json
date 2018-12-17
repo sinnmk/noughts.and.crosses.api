@@ -18,8 +18,6 @@
     },
     "noughtsandcrosses": {
       "commandName": "Project",
-      "launchBrowser": true,
-     // "launchUrl": "Home",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       },
