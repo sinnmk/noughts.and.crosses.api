@@ -8,6 +8,5 @@ namespace noughtsandcrosses.api.Logic.Interfaces
         List<GameDto> GetGames();
         GameDto CreateGame(GameDto gameDto);
         bool UpdateGame(GameDto gameDto);
-        bool DeleteGame(int boardId);
     }
 }

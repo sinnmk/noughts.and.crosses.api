@@ -8,7 +8,7 @@ namespace noughtsandcrosses.api.test
     public class GameRepositorySpec
     {
         [Fact]
-        public void AddGame_CreatesASingleInstanceOfAGame()
+        public void AddGame_CallsAddGameInRepository()
         {
             var dataContext = new DataContext();
 
@@ -17,6 +17,12 @@ namespace noughtsandcrosses.api.test
             gameRepository.AddGame(game);
 
             Assert.Equal(1, dataContext.Games.Count());
+        }
+
+        [Fact]
+        public void UpdateGame_UpdatesAGameByGameIdInRepository()
+        {
+
         }
     }
 }

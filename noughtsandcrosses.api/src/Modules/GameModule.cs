@@ -13,7 +13,6 @@ namespace noughtsandcrosses.api.Modules
             Get("/", parameters => gameLogic.GetGames());
             Post("/", parameters => gameLogic.CreateGame(RequestBodyDecoder.Decode<GameDto>(Request.Body as RequestStream)) );
             Put("/", parameters => gameLogic.UpdateGame(RequestBodyDecoder.Decode<GameDto>(Request.Body as RequestStream)));
-            Delete("/{GameId:int}", parameters => gameLogic.DeleteGame(parameters.GameId));
         }
 
         private Response CheckAccess()

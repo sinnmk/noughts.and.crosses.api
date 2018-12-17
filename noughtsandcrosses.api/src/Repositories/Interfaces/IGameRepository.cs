@@ -8,6 +8,5 @@ namespace noughtsandcrosses.api.Repositories.Interfaces
         List<Game> GetGames();
         Game AddGame(Game game);
         bool UpdateGame(Game game);
-        bool DeleteGame(int id);
     }
 }

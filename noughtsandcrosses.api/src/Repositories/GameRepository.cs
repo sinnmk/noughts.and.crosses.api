@@ -52,16 +52,6 @@ namespace noughtsandcrosses.api.Repositories
             _dataContext.SaveChanges();
             return true;
         }
-
-        public bool DeleteGame(int id)
-        {
-            var gameToDelete = _dataContext.Games.FirstOrDefault(x => x.GameId == id);
-            if (gameToDelete == null) throw new Exception("Game not found");
-
-            _dataContext.Games.Remove(gameToDelete);
-            _dataContext.SaveChanges();
-            return true;
-        }
     }
 }
 
