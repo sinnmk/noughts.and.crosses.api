@@ -1,9 +1,9 @@
 ﻿using System.Collections.Generic;
-using NoughtsAndCrosses.Src.Logic.Dtos;
-using NoughtsAndCrosses.Src.Logic.Interfaces;
-using NoughtsAndCrosses.Src.Repositories.Interfaces;
+using noughtsandcrosses.api.Logic.Dtos;
+using noughtsandcrosses.api.Logic.Interfaces;
+using noughtsandcrosses.api.Repositories.Interfaces;
 
-namespace NoughtsAndCrosses.Src.Logic
+namespace noughtsandcrosses.api.Logic
 {
     public class GameLogic : IGameLogic
     {

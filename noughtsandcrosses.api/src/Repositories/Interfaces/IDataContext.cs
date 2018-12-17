@@ -1,15 +1,11 @@
-﻿using System.Threading.Tasks;
-using Microsoft.EntityFrameworkCore;
-using NoughtsAndCrosses.Src.Repositories.Models;
+﻿using Microsoft.EntityFrameworkCore;
+using noughtsandcrosses.api.Repositories.Models;
 
-namespace NoughtsAndCrosses.Src.Repositories.Interfaces
+namespace noughtsandcrosses.api.Repositories.Interfaces
 {
     public interface IDataContext
     {
         DbSet<Game> Games { get; set; }
-        DbSet<Board> Boards { get; set; }
-        DbSet<Player> Players { get; set; }
         int SaveChanges();
-        Task SaveChangesAsync();
     }
 }

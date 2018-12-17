@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
-using NoughtsAndCrosses.Src.Logic.Dtos;
+using noughtsandcrosses.api.Logic.Dtos;
 
-namespace NoughtsAndCrosses.Src.Logic.Interfaces
+namespace noughtsandcrosses.api.Logic.Interfaces
 {
     public interface IGameLogic
     {

@@ -1,8 +1,7 @@
 ﻿using System.IO;
-using App.server;
 using Microsoft.AspNetCore.Hosting;
 
-namespace NoughtsAndCrosses
+namespace noughtsandcrosses.api
 {
     public class Program
     {

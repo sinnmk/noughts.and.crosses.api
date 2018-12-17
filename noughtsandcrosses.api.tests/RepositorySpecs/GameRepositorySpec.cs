@@ -1,7 +1,6 @@
 ﻿using Xunit;
-using Moq;
 
-namespace TestTicTacToe.RepositorySpecs
+namespace noughtsandcrosses.api.tests.RepositorySpecs
 {
     public class GameRepositorySpec
     {

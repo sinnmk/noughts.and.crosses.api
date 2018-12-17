@@ -1,11 +1,11 @@
 ﻿using Microsoft.AspNetCore.Server.Kestrel.Core;
+using noughtsandcrosses.api.Repositories;
+using noughtsandcrosses.api.Repositories.Interfaces;
 using Nancy;
 using Nancy.Bootstrapper;
 using Nancy.TinyIoc;
-using NoughtsAndCrosses.Src.Repositories;
-using NoughtsAndCrosses.Src.Repositories.Interfaces;
 
-namespace NoughtsAndCrosses
+namespace noughtsandcrosses.api
 {
     public class Bootstrapper: DefaultNancyBootstrapper
     {
@@ -14,9 +14,7 @@ namespace NoughtsAndCrosses
         public static void Initialize(TinyIoCContainer container, IPipelines pipelines, NancyContext context)
         {
             container.Register<IDataContext, DataContext>().AsMultiInstance();
-            container.Register<IBoardRepository, BoardRespository>().AsMultiInstance();
             container.Register<IGameRepository, GameRepository>().AsMultiInstance();
-            container.Register<IPlayerRepository, PlayerRepository>().AsMultiInstance();
         }
     }
 }

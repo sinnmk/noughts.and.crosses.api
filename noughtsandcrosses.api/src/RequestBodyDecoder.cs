@@ -1,9 +1,8 @@
 ﻿using System.Text;
-using noughtsandcrosses.api;
 using Nancy.IO;
 using Newtonsoft.Json;
 
-namespace NoughtsAndCrosses.Src
+namespace noughtsandcrosses.api
 {
     public static class RequestBodyDecoder
     {

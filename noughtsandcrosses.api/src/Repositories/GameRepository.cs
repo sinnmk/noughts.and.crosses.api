@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using NoughtsAndCrosses.Src.Repositories.Interfaces;
-using NoughtsAndCrosses.Src.Repositories.Models;
+using noughtsandcrosses.api.Repositories.Interfaces;
+using noughtsandcrosses.api.Repositories.Models;
 
-namespace NoughtsAndCrosses.Src.Repositories
+namespace noughtsandcrosses.api.Repositories
 {
     public class GameRepository: IGameRepository
     {

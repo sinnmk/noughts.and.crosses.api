@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace NoughtsAndCrosses.Src.Repositories.Models
+namespace noughtsandcrosses.api.Repositories.Models
 {
     public class Game
     {

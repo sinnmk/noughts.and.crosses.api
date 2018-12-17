@@ -7,7 +7,7 @@ using Nancy.Json;
 using Nancy.Testing;
 using Xunit;
 
-namespace noughtsandcrosses.api.tests.ModuleSpecs
+namespace noughtsandcrosses.api.test
 {
     public class GameModuleSpec
     {

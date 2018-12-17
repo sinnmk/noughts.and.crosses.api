@@ -3,12 +3,12 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using noughtsandcrosses.api.Repositories;
 using Nancy;
 using Nancy.Owin;
-using NoughtsAndCrosses.Src.Repositories;
 using IApplicationBuilder = Microsoft.AspNetCore.Builder.IApplicationBuilder;
 
-namespace App.server
+namespace noughtsandcrosses.api
 {
     public class Startup
     {

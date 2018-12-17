@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
-using NoughtsAndCrosses.Src.Repositories.Models;
+using noughtsandcrosses.api.Repositories.Models;
 
-namespace NoughtsAndCrosses.Src.Repositories.Interfaces
+namespace noughtsandcrosses.api.Repositories.Interfaces
 {
     public interface IGameRepository
     {

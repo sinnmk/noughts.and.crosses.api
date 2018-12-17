@@ -1,4 +1,4 @@
-﻿namespace NoughtsAndCrosses.Src.Logic.Dtos
+﻿namespace noughtsandcrosses.api.Logic.Dtos
 {
     public class GameDto
     {

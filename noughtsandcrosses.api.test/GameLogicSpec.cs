@@ -1,11 +1,11 @@
-﻿using Moq;
+using Moq;
 using noughtsandcrosses.api.Logic;
 using noughtsandcrosses.api.Logic.Dtos;
 using noughtsandcrosses.api.Repositories.Interfaces;
 using noughtsandcrosses.api.Repositories.Models;
 using Xunit;
 
-namespace noughtsandcrosses.api.tests.LogicSpecs
+namespace noughtsandcrosses.api.test
 {
     public class GameLogicSpec
     {
@@ -16,7 +16,7 @@ namespace noughtsandcrosses.api.tests.LogicSpecs
             gameRepoMock.Setup(x => x.AddGame(It.IsAny<Game>())).Returns(new Game());
             var logicLayer = new GameLogic(gameRepoMock.Object);
             logicLayer.CreateGame(new GameDto());
-            gameRepoMock.Verify(x =>x.AddGame(It.IsAny<Game>()));
+            gameRepoMock.Verify(x => x.AddGame(It.IsAny<Game>()));
         }
 
         [Fact]
@@ -27,7 +27,7 @@ namespace noughtsandcrosses.api.tests.LogicSpecs
             gameRepoMock.Setup(x => x.UpdateGame(It.IsAny<Game>()));
             var gameDto = new GameDto()
             {
-                GameId = 1, 
+                GameId = 1,
                 IsGameOver = true
             };
             logicLayer.UpdateGame(gameDto);

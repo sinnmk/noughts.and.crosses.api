@@ -1,8 +1,7 @@
-﻿using Nancy;
+﻿using noughtsandcrosses.api.Logic.Dtos;
+using noughtsandcrosses.api.Logic.Interfaces;
+using Nancy;
 using Nancy.IO;
-using NoughtsAndCrosses.Src;
-using NoughtsAndCrosses.Src.Logic.Dtos;
-using NoughtsAndCrosses.Src.Logic.Interfaces;
 
 namespace noughtsandcrosses.api.Modules
 {
