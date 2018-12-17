@@ -3,7 +3,7 @@ using NoughtsAndCrosses.Src.Logic.Dtos;
 using NoughtsAndCrosses.Src.Logic.Interfaces;
 using NoughtsAndCrosses.Src.Repositories.Interfaces;
 
-namespace NoughtsAndCrosses.Src.Logic
+namespace noughtsandcrosses.api.Logic
 {
     public class BoardLogic : IBoardLogic
     {
