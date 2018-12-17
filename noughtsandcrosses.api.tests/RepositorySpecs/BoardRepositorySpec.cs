@@ -5,8 +5,9 @@ namespace TestTicTacToe.RepositorySpecs
     public class BoardRepositorySpec
     {
         [Fact]
-        public void TestOne()
+        public void CreateGame_CallsCreateGame()
         {
+            var dataContext = new EffortContext();
 
         } 
     }

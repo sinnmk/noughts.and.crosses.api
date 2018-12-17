@@ -1,6 +1,6 @@
 ﻿using Xunit;
 using Moq;
-using NoughtsAndCrosses.Src.Logic;
+using noughtsandcrosses.api.Logic;
 using NoughtsAndCrosses.Src.Logic.Dtos;
 using NoughtsAndCrosses.Src.Repositories.Interfaces;
 using NoughtsAndCrosses.Src.Repositories.Models;
@@ -32,13 +32,6 @@ namespace TestTicTacToe.LogicSpecs
             };
             logicLayer.UpdateBoard(boardDto);
             boardRepoMock.Verify(x => x.UpdateBoard(It.Is<Board>(p => p.BoardId == 1 && p.BoardDimension == 4)));
-        }
-
-        [Fact]
-        public void GetBoards_CallsGetBoardsInBoardRepository()
-        {
-            var boardRepoMock = new Mock<IBoardRepository>();
-            var logicLayer = new BoardLogic(boardRepoMock.Object);
         }
     }
 }

@@ -1,11 +1,11 @@
 using Xunit;
 
-namespace TestTicTacToe.ModuleSpecs
+namespace noughtsandcrosses.api.tests.ModuleSpecs
 {
     public class BoardModuleSpec
     {
         [Fact]
-        public void TestPostEndpoint()
+        public void CanCallPostBoard()
         {
 
         }

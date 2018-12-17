@@ -15,6 +15,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\noughtsandcrosses.api\NoughtsAndCrosses-App.csproj" />
+    <ProjectReference Include="..\noughtsandcrosses.api\noughtsandcrosses.api.csproj" />
   </ItemGroup>
 
 </Project>

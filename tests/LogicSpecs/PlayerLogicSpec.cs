@@ -1,34 +1,10 @@
-﻿using Moq;
-using NoughtsAndCrosses.Src.Repositories.Interfaces;
-using Xunit;
+﻿using System;
+using System.Collections.Generic;
+using System.Text;
 
-namespace noughtsandcrosses.tests.LogicSpecs
+namespace noughtsandcrosses.tests
 {
-    public class PlayerLogicSpec
+    class PlayerLogicSpec
     {
-        [Fact]
-        public void CreatePlayer_CallsAddPlayerInPlayerRepository()
-        {
-            var playerRepoMock = new Mock<IPlayerRepository>();
-
-        }
-
-        [Fact]
-        public void UpdatePlayer_CallsUpdatePlayerInPlayerRepository()
-        {
-
-        }
-
-        [Fact]
-        public void DeletePlayer_CallsDeletePlayerInPlayerRepository()
-        {
-
-        }
-
-        [Fact]
-        public void GetPlayers_CallsGetPlayersInPlayerRepository()
-        {
-
-        }
     }
 }

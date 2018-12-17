@@ -1,7 +1,10 @@
-﻿namespace noughtsandcrosses.tests.ModuleSpecs
-{
-    public class GameModuleSpec
-    {
+﻿using System;
+using System.Collections.Generic;
+using System.Text;
 
+namespace noughtsandcrosses.tests
+{
+    class GameModuleSpec
+    {
     }
 }

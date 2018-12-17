@@ -1,9 +1,10 @@
 ﻿using Nancy;
 using Nancy.IO;
+using NoughtsAndCrosses.Src;
 using NoughtsAndCrosses.Src.Logic.Dtos;
 using NoughtsAndCrosses.Src.Logic.Interfaces;
 
-namespace NoughtsAndCrosses.Src.Modules
+namespace noughtsandcrosses.api.Modules
 {
     public class GameModule: NancyModule
     {

@@ -1,7 +1,10 @@
-﻿namespace noughtsandcrosses.tests.RepositorySpecs
+﻿using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace noughtsandcrosses.tests
 {
-    public class BoardRepositorySpec
+    class BoardRepositorySpec
     {
-        
     }
 }

@@ -1,7 +1,10 @@
-﻿namespace noughtsandcrosses.tests.RepositorySpecs
-{
-    public class GameRepositorySpec
-    {
+﻿using System;
+using System.Collections.Generic;
+using System.Text;
 
+namespace noughtsandcrosses.tests
+{
+    class Class1
+    {
     }
 }

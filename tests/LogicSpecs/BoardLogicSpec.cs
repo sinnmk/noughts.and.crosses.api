@@ -1,11 +1,7 @@
+﻿using Xunit;
 using Moq;
-using noughtsandcrosses.api.Logic;
-using NoughtsAndCrosses.Src.Logic.Dtos;
-using NoughtsAndCrosses.Src.Repositories.Interfaces;
-using NoughtsAndCrosses.Src.Repositories.Models;
-using Xunit;
 
-namespace noughtsandcrosses.tests.LogicSpecs
+namespace noughtsandcrosses.api.tests.LogicSpecs
 {
     public class BoardLogicSpec
     {
